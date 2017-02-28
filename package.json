@@ -1,0 +1,25 @@
+{
+  "author"      : "YOU <YOU@example.com>",
+  "name"        : "my_actionhero_project",
+  "description" : "my actionhero project",
+  "version"     : "0.0.1",
+  "engines"     : {
+    "node": ">=4.0.0"
+  },
+  "dependencies" : {
+    "actionhero" : "16.0.1",
+    "ws"         : "latest",
+    "fakeredis"  : "latest",
+    "ioredis"    : "latest"
+  },
+  "devDependencies" : {
+    "cross-env"  : "latest",
+    "chai"       : "latest",
+    "mocha"      : "latest"
+  },
+  "scripts" : {
+    "start"      : "actionhero start",
+    "actionhero" : "actionhero",
+    "test"       : "cross-env NODE_ENV=test mocha"
+  }
+}
