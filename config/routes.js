@@ -27,6 +27,9 @@ exports['default'] = {
 
       ---------------------- */
 
+      post: [
+          { path: '/beers', action: 'createBeer' }
+      ]
     }
   }
 }

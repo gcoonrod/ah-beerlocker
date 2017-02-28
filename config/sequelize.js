@@ -13,12 +13,16 @@ exports.default = {
     }
 };
 
+exports.test = {
+    sequelize: function(api){
+        return {
+            "loadFixtures": true
+        };
+    }
+};
+
 // For sequelize-cli
 // Add to the exports below, if you have setup additional environment-specific settings
-
-exports.development = exports.default.sequelize();
-//exports.test = merge(exports.test);
-//exports.production = merge(exports.production);
 
 var merge = function(overlayFn) {
     var mergeObj = {};
@@ -29,6 +33,11 @@ var merge = function(overlayFn) {
     mergeObj.sequelize = overlayFn.sequelize;
     return mergeObj;
 };
+
+exports.development = exports.default.sequelize();
+exports.test = merge(exports.test);
+//exports.production = merge(exports.production);
+
 
 // You can define even more elaborate configurations (including replication).
 // See http://sequelize.readthedocs.org/en/latest/api/sequelize/index.html for more information
