@@ -1,25 +1,33 @@
 {
-  "author"      : "YOU <YOU@example.com>",
-  "name"        : "my_actionhero_project",
-  "description" : "my actionhero project",
-  "version"     : "0.0.1",
-  "engines"     : {
-    "node": ">=4.0.0"
+  "author": "greg.coonrod@gmail.com",
+  "name": "ah-beerlocker",
+  "description": "my actionhero project",
+  "version": "0.0.1",
+  "license": "MIT",
+  "engines": {
+    "node": "=6.9.5"
   },
-  "dependencies" : {
-    "actionhero" : "16.0.1",
-    "ws"         : "latest",
-    "fakeredis"  : "latest",
-    "ioredis"    : "latest"
+  "dependencies": {
+    "actionhero": "16.0.1",
+    "ah-sequelize-plugin": "^0.8.7",
+    "bluebird": "^3.4.7",
+    "fakeredis": "latest",
+    "ioredis": "latest",
+    "lodash": "^4.17.4",
+    "pg": "^6.1.2",
+    "sequelize": "^3.30.2",
+    "ws": "latest"
   },
-  "devDependencies" : {
-    "cross-env"  : "latest",
-    "chai"       : "latest",
-    "mocha"      : "latest"
+  "devDependencies": {
+    "chai": "latest",
+    "cross-env": "latest",
+    "mocha": "latest",
+    "sequelize-cli": "^2.5.1",
+    "sinon": "^1.17.7"
   },
-  "scripts" : {
-    "start"      : "actionhero start",
-    "actionhero" : "actionhero",
-    "test"       : "cross-env NODE_ENV=test mocha"
+  "scripts": {
+    "start": "actionhero start",
+    "actionhero": "actionhero",
+    "test": "cross-env NODE_ENV=test mocha"
   }
 }
