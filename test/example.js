@@ -1,3 +1,5 @@
+/* global describe, before, after, it, require */
+
 var ActionheroPrototype = require('actionhero')
 var actionhero = new ActionheroPrototype()
 var expect = require('chai').expect

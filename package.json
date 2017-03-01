@@ -8,7 +8,7 @@
     "node": "=6.9.5"
   },
   "dependencies": {
-    "actionhero": "16.0.1",
+    "actionhero": "16.0.2",
     "ah-sequelize-plugin": "^0.8.7",
     "bluebird": "^3.4.7",
     "fakeredis": "latest",
@@ -24,11 +24,26 @@
     "mocha": "latest",
     "sequelize-cli": "^2.5.1",
     "sequelize-fixtures": "^0.5.6",
-    "sinon": "^1.17.7"
+    "sinon": "^1.17.7",
+    "standard": "^9.0.0"
   },
   "scripts": {
     "start": "actionhero start",
     "actionhero": "actionhero",
     "test": "cross-env NODE_ENV=test mocha"
+  },
+  "standard": {
+    "ignore": [
+      "public/javascript/actionheroClient.*"
+    ],
+    "globals": [
+      "describe",
+      "before",
+      "beforeEach",
+      "after",
+      "afterEach",
+      "it",
+      "expect"
+    ]
   }
 }
