@@ -5,7 +5,7 @@ const Promise = require('bluebird');
 module.exports = {
     up: function(migration, DataTypes){
         return Promise.all([
-            migration.createTable('beer', {
+            migration.createTable('beers', {
                 id: {
                     type: DataTypes.INTEGER,
                     primaryKey: true,
@@ -14,13 +14,15 @@ module.exports = {
                 name: DataTypes.STRING,
                 type: DataTypes.STRING,
                 quantity: DataTypes.INTEGER,
-                description: DataTypes.TEXT
+                description: DataTypes.TEXT,
+                createdAt: DataTypes.DATE,
+                updatedAt: DataTypes.DATE
             })
         ])
             .then(function(){
                 return Promise.all([
-                    migration.addIndex('beer', ['name'], {
-                        indexName: 'beer_name_index',
+                    migration.addIndex('beers', ['name'], {
+                        indexName: 'beers_name_index',
                         indicesType: 'UNIQUE'
                     })
                 ])
@@ -28,7 +30,7 @@ module.exports = {
     },
     down: function(migration, DataTypes){
         return Promise.all([
-            migration.dropTable('beer')
+            migration.dropTable('beers')
         ]);
     }
 }
