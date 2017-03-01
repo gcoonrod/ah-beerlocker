@@ -27,8 +27,17 @@ exports['default'] = {
 
       ---------------------- */
 
+      get: [
+          { path: '/beers', action: 'getAllBeer' },
+          { path: '/beers/:id', action: 'getBeer' }
+      ],
+
       post: [
           { path: '/beers', action: 'createBeer' }
+      ],
+
+      delete: [
+          { path: '/beers/:id', action: 'removeBeer' }
       ]
     }
   }
