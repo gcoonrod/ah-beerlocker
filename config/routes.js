@@ -29,16 +29,21 @@ exports['default'] = {
 
       get: [
           { path: '/beers', action: 'getAllBeer' },
-          { path: '/beers/:id', action: 'getBeer' }
+          { path: '/beers/:id', action: 'getBeer' },
+          { path: '/users', action: 'getAllUser' },
+          { path: '/users/:id', action: 'getUser' }
       ],
 
       post: [
           { path: '/beers', action: 'createBeer' },
-          { path: '/beers/:id', action: 'updateBeer' }
+          { path: '/beers/:id', action: 'updateBeer' },
+          { path: '/users', action: 'createUser' },
+          { path: '/users/:id', action: 'updateUser' }
       ],
 
       delete: [
-          { path: '/beers/:id', action: 'removeBeer' }
+          { path: '/beers/:id', action: 'removeBeer' },
+          { path: '/users/:id', action: 'removeUser' }
       ]
     }
   }

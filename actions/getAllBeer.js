@@ -13,9 +13,6 @@ exports.action = {
     inputs: {}, //TODO: Filter by type, quantity, favorite
 
     run: function(api, data, next) {
-        let error = null
-        // your logic here
-
         api.log(['Getting list of all beers'], 'info')
         api.models.beer.findAll({raw: true})
             .then(beers => {
