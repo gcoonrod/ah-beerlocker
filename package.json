@@ -30,6 +30,7 @@
   "scripts": {
     "start": "actionhero start",
     "actionhero": "actionhero",
+    "lint": "node_modules/.bin/standard --fix",
     "test": "cross-env NODE_ENV=test mocha"
   },
   "standard": {
