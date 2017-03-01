@@ -33,7 +33,8 @@ exports['default'] = {
       ],
 
       post: [
-          { path: '/beers', action: 'createBeer' }
+          { path: '/beers', action: 'createBeer' },
+          { path: '/beers/:id', action: 'updateBeer' }
       ],
 
       delete: [
