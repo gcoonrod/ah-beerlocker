@@ -23,6 +23,7 @@
     "cross-env": "latest",
     "mocha": "latest",
     "sequelize-cli": "^2.5.1",
+    "sequelize-fixtures": "^0.5.6",
     "sinon": "^1.17.7"
   },
   "scripts": {
