@@ -13,16 +13,16 @@ exports.action = {
   inputs: {},
 
   run: function (api, data, next) {
-      api.log(['Getting list of all users'], 'info')
-      api.models.user.findAll({raw: true})
+    api.log(['Getting list of all users'], 'info')
+    api.models.user.findAll({raw: true})
           .then(users => {
-              api.log(['Successfully found users'], 'info')
-              data.response = users
-              next()
+            api.log(['Successfully found users'], 'info')
+            data.response = users
+            next()
           })
           .catch(error => {
-              api.log(['Error finding users!'], 'error', error)
-              next(error)
+            api.log(['Error finding users!'], 'error', error)
+            next(error)
           })
   }
 }

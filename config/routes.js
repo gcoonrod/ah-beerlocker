@@ -43,7 +43,7 @@ exports['default'] = {
 
       delete: [
           { path: '/beers/:id', action: 'removeBeer' },
-          { path: '/users/:id', action: 'removeUser'}
+          { path: '/users/:id', action: 'removeUser' }
       ]
     }
   }
