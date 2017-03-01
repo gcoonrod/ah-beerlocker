@@ -1,20 +1,20 @@
 'use strict'
 
 exports.action = {
-  name: 'getBeer',
-  description: 'My Action',
-  blockedConnectionTypes: [],
-  outputExample: {},
-  matchExtensionMimeType: false,
-  version: 1.0,
-  toDocument: true,
-  middleware: [],
+    name: 'getBeer',
+    description: 'My Action',
+    blockedConnectionTypes: [],
+    outputExample: {},
+    matchExtensionMimeType: false,
+    version: 1.0,
+    toDocument: true,
+    middleware: [],
 
-  inputs: {
-    id: {required: true}
-  },
+    inputs: {
+        id: {required: true}
+    },
 
-  run: function (api, data, next) {
+    run: function(api, data, next) {
     api.log(['Looking for beer %s', data.params.id], 'info')
     api.models.beer.findById(data.params.id)
             .then(beer => {
