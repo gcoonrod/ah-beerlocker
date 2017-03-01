@@ -19,7 +19,9 @@ module.exports = {
           validate: {
             isEmail: true
           }
-        }
+        },
+          createdAt: DataTypes.DATE,
+          updatedAt: DataTypes.DATE
       })
     ])
         .then(function () {
